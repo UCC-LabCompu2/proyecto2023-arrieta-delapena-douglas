@@ -1,4 +1,3 @@
- título del proyecto, autores con nombre y apellido, link de gh-pages, contenido de la página, listado de tecnologías usadas, etc)
 - [ ] WhereToWatch
 
 - [ ] Autores:
