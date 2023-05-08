@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,400&display=swap');
+
+
+        body {
+            background-color: black;
+            color: red;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            margin-top: 30px;
+        }
+        .title-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px;
+        }
+        .movies-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .movie-container {
+            width: 200px;
+            height: 300px;
+            margin: 20px;
+            background-color: #1C1C1C;
+            background-size: cover;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .movie-image {
+            width: 150px;
+            height: 225px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .movie-title {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .movie-description {
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .movie-button {
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+        }
