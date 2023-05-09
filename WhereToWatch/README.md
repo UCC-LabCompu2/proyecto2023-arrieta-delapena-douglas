@@ -12,4 +12,5 @@
 - [ ] Tecnogogias usadas:
 - [ ] -HTML
 - [ ] -CSS
-- [ ] -Archivos varios (.json; png; etc)
+- [ ] -Archivos varios (.json; png; fuentes; js; etc)
+- [ ] -Skecth y Mockup
