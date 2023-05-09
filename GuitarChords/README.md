@@ -13,3 +13,4 @@
 - [ ] -HTML
 - [ ] -CSS
 - [ ] -Imagenes (png)
+- [ ] -Skecth y Mockup
