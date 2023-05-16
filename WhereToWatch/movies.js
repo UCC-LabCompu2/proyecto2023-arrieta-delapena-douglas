@@ -5,14 +5,21 @@ const loadMovies = async () => {
 
         let peliculas = '';
         data.results.forEach(pelicula =>{
+
+            let saveMovieId =  (moveid) => {
+                localStorage.setItem('movieId', moveid);
+                location.href = 'description.html';
+            }
+
             peliculas += `
                 <div class ='movie-container'>
-                    <img class='movie-image' src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}">
-                    <h3 class="movie-title">${pelicula.title}</h3> 
+                    <img class='movie-image' src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="Movie image">
+                    <!--aca esta el problema, depende de la funcion saveMovieId que pagina se abre-->
+                    <button class="movie-button" onclick="${saveMovieId(pelicula.id)}" target="_self">Ver mas</button>
                 </div>
             `;
         })
-        document.getElementById('movies-container').innerHTML = peliculas
+        document.getElementById('movies-container').innerHTML = peliculas;
 
     }catch (error){
         console.log(error)

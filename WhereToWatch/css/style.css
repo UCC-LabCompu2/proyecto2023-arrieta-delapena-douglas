@@ -1,80 +1,139 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,400&display=swap');
 
 
-        body {
-            background-color: black;
-            color: red;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        form {
-            margin-top: 30px;
-        }
-        @font-face {
-            font-family: 'myfont';
-            src: url('/Users/benjamindouglas/benja/Code/Lab_Compu/proyecto2023-arrieta-delapena-douglas/WhereToWatch/css/Futura.ttc') format('truetype');
-        }
-        @font-face {
-            font-family: 'myfont2';
-            src: url('/System/Library/Fonts/Optima.ttc') format('truetype');
-        }
+body {
+    background-color: black;
+    color: red;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+}
+form {
+    margin-top: 30px;
+}
+button {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
 
-        .title-container {
-            position: absolute;
-            top: 0;
-            left: 20;
-            padding: 20px;
-            font-family: 'myfont', sans-serif;
-        }
+/*add a font family with this adress /Users/benjamindouglas/Downloads/indieground-aironefont-demo/AironeFont-Demo.otf*/
+@font-face {
+    font-family: 'Newake';
+    src: url('fonts/Newake-Font-Demo.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
-        .movies-container {
-            display: inline-flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            margin-top: 900px;
-        }
-        .movie-container {
-            width: 200px;
-            height: 320px;
-            margin: 20px;
-            background-color: #1C1C1C;
-            background-size: cover;
-            border-radius: 5px;
-            display: inline-flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .movie-image {
-            width: 150px;
-            height: 225px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-        }
-        .movie-title {
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 10px;
-            font-family: 'ui-sans-serif', sans-serif;
-        }
-        .movie-description {
-            font-size: 14px;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        .movie-button {
-            background-color: red;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 5px 10px;
-            cursor: pointer;
-            font-size: 14px;
-        }
+.title-container {
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    font-family: 'Newake', sans-serif;
+    color: aliceblue;
+    font-size: 25px;
+}
+
+.movies-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 900px;
+}
+.movie-container {
+    width: 200px;
+    height: 320px;
+    margin: 20px;
+    background-color: #1C1C1C;
+    background-size: cover;
+    border-radius: 5px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.movie-image {
+    width: 160px;
+    height: 250px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+@font-face {
+    font-family: 'GillSans';
+    src: url('fonts/GillSans.ttc') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+.movie-title {
+    font-size: 18px;
+    font-family: 'GillSans',sans-serif;
+    font-weight: bold;
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.movie-description {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.movie-button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+/* add this CSS to your stylesheet */
+.movie-container {
+    position: relative; /* add this to allow the overlay to cover the container */
+}
+
+.movie-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.5s linear; /* add a linear transition */
+}
+
+.movie-container:hover .movie-overlay {
+    opacity: 0.5;
+    cursor: pointer; /* add a pointer cursor on hover */
+}
+
+.movie-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.5s linear; /* add a linear transition */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-modal.active {
+    opacity: 1;
+}
+.movie-button{
+    color: aliceblue;
+/*    make it a little lower*/
+    margin-top: 15px;
+}
+
+
