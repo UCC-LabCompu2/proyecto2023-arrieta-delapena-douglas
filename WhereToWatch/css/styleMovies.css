@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,400&display=swap');
-
-
 body {
     background-color: black;
     color: red;
@@ -47,6 +44,7 @@ button {
     margin-top: 900px;
 }
 .movie-container {
+    position: relative;
     width: 200px;
     height: 320px;
     margin: 20px;
@@ -58,12 +56,19 @@ button {
     justify-content: center;
     align-items: center;
 }
+
+.movie-container:hover .movie-overlay {
+    opacity: 0.5;
+    cursor: pointer; /* add a pointer cursor on hover */
+}
+
 .movie-image {
     width: 160px;
     height: 250px;
     margin-top: 10px;
     border-radius: 5px;
 }
+
 @font-face {
     font-family: 'GillSans';
     src: url('fonts/GillSans.ttc') format('opentype');
@@ -92,10 +97,6 @@ button {
     cursor: pointer;
     font-size: 14px;
 }
-/* add this CSS to your stylesheet */
-.movie-container {
-    position: relative; /* add this to allow the overlay to cover the container */
-}
 
 .movie-overlay {
     position: absolute;
@@ -108,10 +109,6 @@ button {
     transition: opacity 0.5s linear; /* add a linear transition */
 }
 
-.movie-container:hover .movie-overlay {
-    opacity: 0.5;
-    cursor: pointer; /* add a pointer cursor on hover */
-}
 
 .movie-modal {
     position: fixed;
@@ -135,5 +132,3 @@ button {
 /*    make it a little lower*/
     margin-top: 15px;
 }
-
-

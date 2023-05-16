@@ -1,3 +1,10 @@
+let saveMovieId =  (moveid) => {
+    localStorage.setItem('movieId', moveid);
+    window.location.href = 'description.html';
+    window.location.target = '_self';
+    loadMovie();
+}
+
 const loadMovies = async () => {
     try {
         const response = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=dcfbb1ad76889a2f3af575f398f1ab52&language=es-MX&page=1');
@@ -5,17 +12,11 @@ const loadMovies = async () => {
 
         let peliculas = '';
         data.results.forEach(pelicula =>{
-
-            let saveMovieId =  (moveid) => {
-                localStorage.setItem('movieId', moveid);
-                location.href = 'description.html';
-            }
-
             peliculas += `
                 <div class ='movie-container'>
                     <img class='movie-image' src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="Movie image">
                     <!--aca esta el problema, depende de la funcion saveMovieId que pagina se abre-->
-                    <button class="movie-button" onclick="${saveMovieId(pelicula.id)}" target="_self">Ver mas</button>
+                    <button class="movie-button"  onclick="saveMovieId(${pelicula.id})" >Ver mas</button>
                 </div>
             `;
         })
