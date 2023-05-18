@@ -11,7 +11,7 @@
     font-weight: normal;
     font-style: normal;
 }
-/*change background color*/
+
 body {
     background-color: black;
 }
@@ -21,8 +21,9 @@ body {
     align-items: center;
     background-color: #1C1C1C;
     background-size: cover;
-    border-radius: 20px;
-    padding: 20px;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .single-movie-title {
@@ -39,18 +40,30 @@ body {
     width: 325px;
     height: 487px;
     margin-left: 30px;
-    border-radius: 15px;
+    border-radius: 5px;
+}
+
+.single-movie-description-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    border-radius: 5px;
+    background-color: red;
+    padding-left: 10px;
 }
 
 .single-movie-description {
-    /*make the text align*/
     text-align: left;
-    color: aliceblue;
-    margin-left: 10px; /* Adjust this margin as needed */
-    font-family: "Arial Black", sans-serif;
+    color: black;
+    margin-left: 10px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 17px;
 }
 
 .single-movie-button {
     /* CSS styles for the button */
+    margin-top: 10px;
 }
 
