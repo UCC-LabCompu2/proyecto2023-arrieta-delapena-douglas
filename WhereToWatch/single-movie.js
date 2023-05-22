@@ -23,7 +23,7 @@ const loadMovie = async () => {
                         <p class='single-movie-description'>${data.overview}</p>
                     </div>
                     <div class='single-movie-provider-div' id='single-movie-provider-div'>
-                        <p class='single-movie-provider'>${providers}</p>
+                        <p class='single-movie-provider'>mirala en: <br>${providers}</p>
                     </div>
                 </div>
             </div>

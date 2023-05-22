@@ -111,7 +111,7 @@ form {
     height: 100%;
     background-color: white;
     opacity: 0;
-    transition: opacity 0.5s linear; /* add a linear transition */
+    transition: opacity 0.5s linear;
     display: flex;
     justify-content: center;
     align-items: center;

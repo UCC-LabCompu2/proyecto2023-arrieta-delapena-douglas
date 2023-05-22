@@ -9,7 +9,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5e51f09f-2970-4c30-938a-3fd7be32580f" name="Changes" comment="Agregue movies.js y description.html con el fin de agregar una descripcion de la pelicula al tocar el boton ver mas. Una funcion &quot;SaveMovieId&quot; en movies.js que utilizo para guardar el movie id de cada pelicula y realize unos cambios en el style.css para cambiar la fuente del titulo y el color">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styleMovies.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styleMovies.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/styleSingleMovies.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styleSingleMovies.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/single-movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/single-movie.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +76,7 @@
       <workItem from="1684435600762" duration="17558000" />
       <workItem from="1684776496259" duration="97000" />
       <workItem from="1684776602330" duration="34000" />
-      <workItem from="1684776645113" duration="16709000" />
+      <workItem from="1684776645113" duration="18359000" />
     </task>
     <task id="LOCAL-00001" summary="Agregue movies.js y description.html con el fin de agregar una descripcion de la pelicula al tocar el boton ver mas. Una funcion &quot;SaveMovieId&quot; en movies.js que utilizo para guardar el movie id de cada pelicula y realize unos cambios en el style.css para cambiar la fuente del titulo y el color">
       <created>1684262386177</created>
