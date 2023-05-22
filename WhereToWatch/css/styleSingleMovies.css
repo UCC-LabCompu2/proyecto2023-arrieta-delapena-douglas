@@ -22,8 +22,20 @@ body {
     background-color: #1C1C1C;
     background-size: cover;
     border-radius: 5px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px;
+}
+
+.single-movie-image {
+    width: 325px;
+    height: 487px;
+    border-radius: 5px;
+}
+
+.single-movie-details {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .single-movie-title {
@@ -31,43 +43,35 @@ body {
     font-size: 50px;
     text-align: left;
     color: aliceblue;
-    margin-left: 15px;
 }
 
-.single-movie-image {
-    width: 325px;
-    height: 487px;
-    margin-left: 30px;
-    border-radius: 5px;
-}
-
-.single-movie-description-container{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 160px;
-    margin-left: 30px;
-    border-radius: 5px;
+.single-movie-description-container {
     background-color: red;
-    padding-left: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
 .single-movie-description {
     text-align: left;
     color: aliceblue;
-    margin-left: 10px;
     font-family: "Trebuchet MS", sans-serif;
     font-size: 17px;
 }
 
-.single-movie-button {
-    margin-top: 10px;
+.single-movie-provider-div {
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.single-movie-provider-div {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 10px; /* Adjust the margin as per your needs */
-    color: aliceblue;
+.single-movie-provider{
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 17px;
+    margin-right: 10px;
+}
+
+.single-movie-button {
+    margin-top: 10px;
 }
