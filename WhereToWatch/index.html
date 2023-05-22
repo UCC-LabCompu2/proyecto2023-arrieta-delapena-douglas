@@ -12,12 +12,16 @@
 
 
 <body>
-<div class="container">
-    <header class="title-container">
-        <h1>WhereToWatch</h1>
-    </header>
-    <div class="movies-container" id="movies-container"><!--aca adentro va el html de movie.js --> </div>
+<!--<div class="container">-->
+<header class="title-container">
+    <h1>WhereToWatch</h1>
+</header>
+<div class='search-box' id='search-box'>
+    <input id='search-bar' type="text" placeholder="Busque una pelicula">
+    <button id='search-button' onclick='lookMovie()'>🔎</button>
 </div>
+<!--</di>-->
+<div class="movies-container" id="movies-container"><!--aca adentro va el html de movie.js --> </div>
 <script src="movies.js"></script>
 </body>
 </html>
