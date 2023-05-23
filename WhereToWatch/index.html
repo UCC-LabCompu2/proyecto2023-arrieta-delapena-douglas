@@ -5,60 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Imagenes/favicon-16x16.png">
-    <link rel="preload" href="css/style.css" as="style">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="css/styleMovies.css" as="style">
+    <link rel="stylesheet" href="css/styleMovies.css">
     <title>WhereToWatch</title>
 </head>
+
+
 <body>
-    <div class="container">
-        <header class="title-container">
-            <h1>WhereToWatch</h1>
-        </header>
-       
-        <form>
-            <label for="search">Buscar película:</label>
-            <input type="text" id="search" name="search">
-            <button type="submit">Buscar</button>
-        </form>
-       
-        <div class="movies-container">
-            <div class="movie-container">
-                <div class="movie-image" style="background-image: url('https://via.placeholder.com/150')"></div>
-                <h2 class="movie-title">Título de la película</h2>
-                <p class="movie-description">Descripción de la película</p>
-                <button class="movie-button">Ver más</button>
-            </div>
-            <div class="movie-container">
-                <div class="movie-image" style="background-image: url('https://via.placeholder.com/150')"></div>
-                <h2 class="movie-title">Título de la película</h2>
-                <p class="movie-description">Descripción de la película</p>
-                <button class="movie-button">Ver más</button>
-            </div>
-            <div class="movie-container">
-                <div class="movie-image" style="background-image: url('https://via.placeholder.com/150')"></div>
-                <h2 class="movie-title">Título de la película</h2>
-                <p class="movie-description">Descripción de la película</p>
-                <button class="movie-button">Ver más</button>
-            </div>
-            <div class="movie-container">
-                <div class="movie-image" style="background-image: url('https://via.placeholder.com/150')"></div>
-                <h2 class="movie-title">Título de la película</h2>
-                <p class="movie-description">Descripción de la película</p>
-                <button class="movie-button">Ver más</button>
-            </div>
-            <div class="movie-container">
-                <div class="movie-image" style="background-image: url('https://via.placeholder.com/150')"></div>
-                <h2 class="movie-title">Título de la película</h2>
-                <p class="movie-description">Descripción de la película</p>
-                <button class="movie-button">Ver más</button>
-            </div>
-            <div class="movie-container">
-                <div class="movie-image" style="background-image: url('https://via.placeholder.com/150')"></div>
-                <h2 class="movie-title">Título de la película</h2>
-                <p class="movie-description">Descripción de la película</p>
-                <button class="movie-button">Ver más</button>
-            </div>
+<div class="container">
+    <header class="title-container">
+        <h1>WhereToWatch</h1>
+    </header>
+    <div class="movies-container" id="movies-container"><!--aca adentro va el html de movie.js --> </div>
 </div>
-</div>
+<script src="movies.js"></script>
 </body>
 </html>
+
