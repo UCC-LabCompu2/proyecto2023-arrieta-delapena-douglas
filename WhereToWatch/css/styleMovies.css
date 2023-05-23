@@ -12,12 +12,6 @@ body {
 form {
     margin-top: 30px;
 }
-button {
-    border: none;
-    cursor: pointer;
-    appearance: none;
-    background-color: inherit;
-}
 
 /*add a font family with this adress /Users/benjamindouglas/Downloads/indieground-aironefont-demo/AironeFont-Demo.otf*/
 @font-face {
@@ -28,7 +22,9 @@ button {
 }
 
 .title-container {
-    position: absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     top: 0;
     padding: 20px;
     font-family: 'Newake', sans-serif;
@@ -41,7 +37,7 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 900px;
+    margin-top: 50px;
 }
 .movie-container {
     position: relative;
@@ -57,10 +53,6 @@ button {
     align-items: center;
 }
 
-.movie-container:hover .movie-overlay {
-    opacity: 0.5;
-    cursor: pointer; /* add a pointer cursor on hover */
-}
 
 .movie-image {
     width: 160px;
@@ -93,7 +85,8 @@ button {
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 5px 10px;
+    margin-top: 10px;
+    padding: 5px 15px;
     cursor: pointer;
     font-size: 14px;
 }
@@ -118,17 +111,25 @@ button {
     height: 100%;
     background-color: white;
     opacity: 0;
-    transition: opacity 0.5s linear; /* add a linear transition */
+    transition: opacity 0.5s linear;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.movie-modal.active {
-    opacity: 1;
+.search-box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
 }
-.movie-button{
-    color: aliceblue;
-/*    make it a little lower*/
-    margin-top: 15px;
+
+.search-box input {
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    font-size: 14px;
 }
+

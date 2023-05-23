@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5e51f09f-2970-4c30-938a-3fd7be32580f" name="Changes" comment="Agregue movies.js y description.html con el fin de agregar una descripcion de la pelicula al tocar el boton ver mas. Una funcion &quot;SaveMovieId&quot; en movies.js que utilizo para guardar el movie id de cada pelicula y realize unos cambios en el style.css para cambiar la fuente del titulo y el color">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styleMovies.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styleMovies.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styleSingleMovies.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styleSingleMovies.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/single-movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/single-movie.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="showPreview" value="true" />
+  </component>
+  <component name="ProjectId" id="2PsDl2ydDY2x70uJ38F3LoqJnBp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/benjamindouglas/benja/Code/Jet Brains/WebStorm/Lab_Compu/proyecto2023-arrieta-delapena-douglas/WhereToWatch",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/css" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5e51f09f-2970-4c30-938a-3fd7be32580f" name="Changes" comment="" />
+      <created>1684237042562</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684237042562</updated>
+      <workItem from="1684237044776" duration="7278000" />
+      <workItem from="1684262045770" duration="15809000" />
+      <workItem from="1684435600762" duration="17558000" />
+      <workItem from="1684776496259" duration="97000" />
+      <workItem from="1684776602330" duration="34000" />
+      <workItem from="1684776645113" duration="18359000" />
+    </task>
+    <task id="LOCAL-00001" summary="Agregue movies.js y description.html con el fin de agregar una descripcion de la pelicula al tocar el boton ver mas. Una funcion &quot;SaveMovieId&quot; en movies.js que utilizo para guardar el movie id de cada pelicula y realize unos cambios en el style.css para cambiar la fuente del titulo y el color">
+      <created>1684262386177</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684262386177</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Agregue movies.js y description.html con el fin de agregar una descripcion de la pelicula al tocar el boton ver mas. Una funcion &quot;SaveMovieId&quot; en movies.js que utilizo para guardar el movie id de cada pelicula y realize unos cambios en el style.css para cambiar la fuente del titulo y el color">
+      <created>1684262417907</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684262417907</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Agregue movies.js y description.html con el fin de agregar una descripcion de la pelicula al tocar el boton ver mas. Una funcion &quot;SaveMovieId&quot; en movies.js que utilizo para guardar el movie id de cada pelicula y realize unos cambios en el style.css para cambiar la fuente del titulo y el color" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregue movies.js y description.html con el fin de agregar una descripcion de la pelicula al tocar el boton ver mas. Una funcion &quot;SaveMovieId&quot; en movies.js que utilizo para guardar el movie id de cada pelicula y realize unos cambios en el style.css para cambiar la fuente del titulo y el color" />
+  </component>
+</project>
