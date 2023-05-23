@@ -4,6 +4,9 @@
 	<title>GuitarChords</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Pagina de acordes para guitarra">
+	<meta name="keywords" content="acordes, guitarra, canciones, teoría musical">
+	<meta name="author" content="Arrieta, Douglas, delaPena">
 	<link rel="stylesheet" type="text/css" href="estilos.css">
 	<link rel="icon" type="image/png" href="favicon_io/favicon.ico">
 </head>
@@ -26,15 +29,21 @@
 			<input type="text" id="buscar" name="buscar">
 			<input type="submit" value="Buscar">
 		</form>
+		<select id="selectCategorias">
+			<option value="Ordenar Alfabeticamente Asc">Ordenar Alfabeticamente Asc</option>
+			<option value="Ordenar Alfabeticamente Desc">Ordenar Alfabeticamente Desc</option>
+		</select>
 	</section>
 
 	<section class="destacados">
-		<h2>Canciones destacadas:</h2>
-		<ul>
-			<li><a href="Canciones/OvermyHead.html">Over My Head (Cable Car) - The Fray</a></li>
-			<li><a href="Canciones/SwingLifeAway.html">Swing Life Away - Rise Against</a></li>
-			<li><a href="Canciones/Pieces.html">Pieces - Sum 41</a></li>
-		</ul>
+		<section id="seccionDestacados" class="destacados">
+			<h2>Canciones destacadas:</h2>
+			<ul>
+				<li><a href="Canciones/OvermyHead.html">Over My Head (Cable Car) - The Fray</a></li>
+				<li><a href="Canciones/SwingLifeAway.html">Swing Life Away - Rise Against</a></li>
+				<li><a href="Canciones/Pieces.html">Pieces - Sum 41</a></li>
+			</ul>
+		</section>
 	</section>
 </main>
 

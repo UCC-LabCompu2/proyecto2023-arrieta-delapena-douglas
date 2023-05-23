@@ -32,9 +32,14 @@ main {
     margin: 20px;
 }
 /* Estilos para la pagina principal */
-.destacados li{
+#seccionDestacados {
+    background-color: lightblue;
+    padding: 10px;
+    margin-top: 20px;
     margin-bottom: 8px;
+    text-align: center;
 }
+
 /* Estilos para la pagina de Escalas */
 .escala {
     align-items: center;
@@ -43,12 +48,15 @@ main {
 }
 
 /* Estilos para los acordes (pagina acordes) */
-.acordes {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-right: 20px;
+.acorde {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 15px;
+    background-color: lightgray;
+}
+
+.acorde:hover {
+    background-color: yellow;
 }
 
 .acorde {
