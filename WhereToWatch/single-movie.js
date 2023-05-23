@@ -11,7 +11,7 @@ const loadMovie = async () => {
         } catch (error) {
             providers = 'No hay proveedores disponibles'
         }
-        const response = await fetch(`https://api.themoviedb.org/3/movie/${takeData}?api_key=dcfbb1ad76889a2f3af575f398f1ab52&language=en-US`);
+        const response = await fetch(`https://api.themoviedb.org/3/movie/${takeData}?api_key=dcfbb1ad76889a2f3af575f398f1ab52&language=es-MX`);
         const data = await response.json();
 
         let pelicula = `

@@ -91,6 +91,11 @@ form {
     font-size: 14px;
 }
 
+.movie-button:hover{
+    background-color: aliceblue;
+    color: black;
+}
+
 .movie-overlay {
     position: absolute;
     top: 0;

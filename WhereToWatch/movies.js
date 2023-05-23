@@ -11,23 +11,19 @@ const loadMovies = async (movieName) => {
         let url = ''
 
         if (movieName === undefined || movieName === '') {
-            console.log("here in if")
             url = `https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=es-MX&page=1`;
         } else {
-            console.log("here in else");
-            console.log(movieName);
             url = `https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${movieName}&include_adult=false&language=es-MX&page=1`;
 
         }
 
         const response = await fetch(url);
         const data = await response.json();
-        console.log(data);
         let peliculas = '';
         data.results.forEach(pelicula => {
             peliculas += `
                 <div class ='movie-container'>
-                    <img class='movie-image' src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="Movie image">
+                    <img class='movie-image' src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="movie image">
                     <button class="movie-button"  onclick="saveMovieId(${pelicula.id})" >Ver mas</button>
                 </div>
             `;
