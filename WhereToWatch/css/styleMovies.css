@@ -1,7 +1,9 @@
 body {
+    margin: 0;
     background-color: black;
     color: red;
 }
+
 .container {
     display: flex;
     flex-direction: column;
@@ -9,6 +11,7 @@ body {
     align-items: center;
     height: 120vh;
 }
+
 form {
     margin-top: 30px;
 }
@@ -21,14 +24,33 @@ form {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/RasmusAndersson-Inter-Extra-bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .title-container {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     top: 0;
     padding: 20px;
     font-family: 'Newake', sans-serif;
     color: aliceblue;
+    /*add spacing between letters*/
+    letter-spacing: 2px;
     font-size: 25px;
 }
 
@@ -39,6 +61,7 @@ form {
     align-items: center;
     margin-top: 50px;
 }
+
 .movie-container {
     position: relative;
     width: 200px;
@@ -67,19 +90,22 @@ form {
     font-weight: normal;
     font-style: normal;
 }
+
 .movie-title {
     font-size: 18px;
-    font-family: 'GillSans',sans-serif;
+    font-family: 'GillSans', sans-serif;
     font-weight: bold;
     color: aliceblue;
     text-align: center;
     margin-bottom: 10px;
 }
+
 .movie-description {
     font-size: 14px;
     text-align: center;
     margin-bottom: 10px;
 }
+
 .movie-button {
     background-color: red;
     color: white;
@@ -91,7 +117,7 @@ form {
     font-size: 14px;
 }
 
-.movie-button:hover{
+.movie-button:hover {
     background-color: aliceblue;
     color: black;
 }
@@ -122,8 +148,8 @@ form {
     align-items: center;
 }
 
-.search-box{
-    display:flex;
+.search-box {
+    display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
@@ -137,4 +163,31 @@ form {
     padding: 5px;
     font-size: 14px;
 }
+
+.no-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    text-align: center; /* Centrar horizontalmente el contenido de texto */
+    margin-left: 600px;
+}
+
+.no-results button {
+    font-family: Inter;
+    font-size: 14px;
+    margin: 0 auto; /* Centrar horizontalmente el botón */
+}
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: white;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
 

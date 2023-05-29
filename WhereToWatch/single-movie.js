@@ -7,9 +7,15 @@ const loadMovie = async () => {
 
             const responseProviders = await fetch(`https://api.themoviedb.org/3/movie/${takeData}/watch/providers?api_key=dcfbb1ad76889a2f3af575f398f1ab52&language=en-US`);
             const prov_data = await responseProviders.json();
-            providers = prov_data.results.AR.flatrate[0].provider_name
+            // providers = prov_data.results.AR.flatrate[0].provider_name
+            // Por ahora solo muestra un proveedor, pero se puede hacer un forEach para mostrar todos los proveedores
+            prov_data.results.AR.forEach(provider => {
+                providers += `${provider.provider_name} <br>`
+                document.getElementById('single-movie-provider-div').innerHTML = providers;
+                console.log(providers)
+            });
         } catch (error) {
-            providers = 'No hay proveedores disponibles'
+            console.log(error)
         }
         const response = await fetch(`https://api.themoviedb.org/3/movie/${takeData}?api_key=dcfbb1ad76889a2f3af575f398f1ab52&language=es-MX`);
         const data = await response.json();
