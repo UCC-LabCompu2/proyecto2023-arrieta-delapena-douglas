@@ -1,9 +1,9 @@
-- [ ] WhereToWatch
+# WhereToWatch
 
-- [ ] Autores:
-- [ ] -Ivan Arrieta
-- [ ] -Jose delaPeña
-- [ ] -Benjamin Douglas
+## Autores:
+- Ivan **Arrieta**
+- Jose delaPeña
+- Benjamin Douglas
 
 - [ ] link de gh-pages: https://benjadouglas.github.io/
 

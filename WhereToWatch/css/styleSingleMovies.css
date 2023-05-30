@@ -15,6 +15,11 @@
 body {
     background-color: black;
 }
+.container{
+    position: relative;
+}
+.single-movie-page{
+}
 
 .single-movie-container {
     display: flex;
@@ -23,12 +28,14 @@ body {
     background-size: cover;
     border-radius: 5px;
     padding: 15px;
+    opacity: 0.8;
 }
 
 .single-movie-image {
     width: 325px;
     height: 487px;
     border-radius: 5px;
+    position: relative;
 }
 
 .single-movie-details {
@@ -85,5 +92,6 @@ body {
     pointer-events: none;
     top: 0;
     left: 0;
+    z-index: -1;
 }
 

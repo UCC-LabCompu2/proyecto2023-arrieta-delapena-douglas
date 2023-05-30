@@ -9,11 +9,12 @@ const loadMovie = async () => {
             const prov_data = await responseProviders.json();
             // providers = prov_data.results.AR.flatrate[0].provider_name
             // Por ahora solo muestra un proveedor, pero se puede hacer un forEach para mostrar todos los proveedores
-            prov_data.results.AR.forEach(provider => {
-                providers += `${provider.provider_name} <br>`
-                document.getElementById('single-movie-provider-div').innerHTML = providers;
-                console.log(providers)
-            });
+            try {
+                providers += `${prov_data.results.AR.flatrate[0].provider_name} <br>`;
+            }catch (error) {
+                providers += 'No hay proveedores disponibles en Argentina <br>';
+            }
+            document.getElementById('single-movie-provider-div').innerHTML = providers;
         } catch (error) {
             console.log(error)
         }
