@@ -1,5 +1,11 @@
 let takeData = localStorage.getItem('movieId');
 
+/**
+ * Encuentra la película por id que se transmite al localStorage cuando se apreta ' Ver mas ' y la muestra en pantalla
+ * @loadMovie
+ * @param {none} none - no toma parámetros
+ * @return no retorna un valor
+ */
 const loadMovie = async () => {
     try {
         let providers = '';
@@ -11,7 +17,7 @@ const loadMovie = async () => {
             // Por ahora solo muestra un proveedor, pero se puede hacer un forEach para mostrar todos los proveedores
             try {
                 providers += `${prov_data.results.AR.flatrate[0].provider_name} <br>`;
-            }catch (error) {
+            } catch (error) {
                 providers += 'No hay proveedores disponibles en Argentina <br>';
             }
             document.getElementById('single-movie-provider-div').innerHTML = providers;

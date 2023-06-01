@@ -1,3 +1,9 @@
+/**
+ * Guarda el movie id en el localStorage y redirige a la página de descripción de la película
+ * @saveMovieId
+ * @param {number} movieid - id de la película
+ * @return no retorna ningún valor
+ */
 let saveMovieId = (moveid) => {
     localStorage.setItem('movieId', moveid);
     window.location.href = 'description.html';
@@ -5,6 +11,12 @@ let saveMovieId = (moveid) => {
     loadMovie();
 }
 
+/**
+ * Carga las películas en la página principal, si se escribe algo en el input, carga las películas que coincidan con el input, sino busca las pelicula más populares
+ * @loadMovies
+ * @param {string} movieName - nombre de la película
+ * @return no retorna ningún valor
+ */
 const loadMovies = async (movieName) => {
     try {
         const key = 'dcfbb1ad76889a2f3af575f398f1ab52';
@@ -13,7 +25,7 @@ const loadMovies = async (movieName) => {
         if (movieName === undefined || movieName === '') {
             url = `https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=es-MX&page=1`;
         } else {
-            url = `https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${movieName}&include_adult=false&language=es-MX&page=1`;
+            url = `https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${movieName}&include_adult=false&language=es-MX&page=1&sort_by=popularity.desc`;
         }
 
         const response = await fetch(url)
@@ -44,12 +56,24 @@ const loadMovies = async (movieName) => {
 
 loadMovies();
 
+/**
+ * Busca las películas que coincidan con el input
+ * @lookMovie
+ * @param {none} none- no toma parámetros
+ * @return no retorna un valor
+ */
 const lookMovie = async () => {
     const inputField = document.getElementById("search-bar");
     let inputValue = inputField.value;
     loadMovies(inputValue);
 }
 
+/**
+ * Si no hay resultados, muestra un alert
+ * @noResults
+ * @param {object} data - objeto con los datos de la película
+ * @return retorna true si no hay resultados
+ */
 const noResults = (data) => {
     if (data.results.length === 0) {
         if (data.results.title !== document.getElementById("search-bar").value && document.getElementById("search-bar").value !== '') {
