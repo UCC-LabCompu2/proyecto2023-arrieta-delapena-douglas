@@ -24,7 +24,12 @@ const loadMovies = async (movieName) => {
 
         if (movieName === undefined || movieName === '') {
             url = `https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=es-MX&page=1`;
-        } else {
+                    // `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1`
+        }
+        else if (movieName === 'rating'){
+            url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=es-MX&page=1`;
+        }
+        else {
             url = `https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${movieName}&include_adult=false&language=es-MX&page=1&sort_by=popularity.desc`;
         }
 
@@ -80,4 +85,10 @@ const noResults = (data) => {
             return true;
         }
     }
+}
+
+const orderByRating = async () => {
+    let heading = document.getElementById("title");
+    heading.innerHTML = `<h1 id="new-title">Películas mej<a href="index.html" id="o-tag">o<\a>r calificadas<\h1>`;
+    loadMovies('rating');
 }
