@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
             circle.y = y;
 
             const nextCircle = circles[index + 1] || circles[0];
-            coords.x += (nextCircle.x - circle.x) * .31;
-            coords.y += (nextCircle.y - circle.y) * .31;
+            coords.x += (nextCircle.x - circle.x) * .35;
+            coords.y += (nextCircle.y - circle.y) * .35;
         });
     }
 });
