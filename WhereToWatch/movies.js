@@ -86,7 +86,12 @@ const noResults = (data) => {
         }
     }
 }
-
+/**
+ * Ordena las películas por rating
+ * @orderByRating
+ * @param {none} none - no toma parámetros
+ * @return no retorna un valor
+ */
 const orderByRating = async () => {
     let heading = document.getElementById("title");
     heading.innerHTML = `<h1 id="new-title">Películas mej<a href="index.html" id="o-tag">o<\a>r calificadas<\h1>`;
