@@ -1,98 +1,189 @@
 @font-face {
-    font-family: 'Newake';
-    src: url('fonts/Newake-Font-Demo.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
 }
 
-@font-face {
-    font-family: 'GillSans';
-    src: url('fonts/GillSans.ttc') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+body{
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
 }
 
-body {
-    background-color: black;
-}
-
-.container {
+.single-movie-backdrop{
     position: relative;
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
 }
 
+.single-movie-backdrop-container{
+    position: relative;
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+}
 
-.single-movie-container {
-    display: flex;
-    align-items: center;
-    background-color: #1C1C1C;
-    background-size: cover;
-    border-radius: 5px;
+.single-movie-backdrop-container::after {
+    display: block;
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #000000FF 88%);
+    margin-top: -330px;
+    height: 330px;
+    width: 100%;
+    content: '';
+}
+
+.single-movie-title{
+    position: absolute;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    top: 0px;
+    left: 98px;
+    width: 1047px;
+    height: 78px;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+    font-size: 64px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.single-movie-container{
+    position: absolute;
+    top: 200px;
+    left: 98px;
+    right: 98px;
+    max-height: 615px;
     padding: 15px;
-    opacity: 0.8;
-}
-
-.single-movie-image {
-    width: 325px;
-    height: 487px;
-    border-radius: 5px;
-    position: relative;
-}
-
-.single-movie-details {
-    margin-left: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.single-movie-title {
-    font-family: Newake, sans-serif;
-    font-size: 50px;
-    text-align: left;
-    color: aliceblue;
-}
-
-.single-movie-description-container {
-    background-color: red;
-    border-radius: 5px;
-    padding: 10px;
     margin-bottom: 20px;
+    border-radius: 14px;
+    background: linear-gradient(141deg, rgba(72, 68, 68, 0.10) 0%, rgba(255, 255, 255, 0.30) 0.01%, rgba(48, 44, 44, 0.50) 100%);
+    backdrop-filter: blur(20px);
+    border-top: 1pt solid rgba(168, 168, 168, 0.8);
+    border-left: 1pt solid rgb(168, 168, 168, 0.8);
+
+    display: inline-flex;
+    align-items: flex-start;
 }
 
-.single-movie-description {
-    text-align: left;
-    color: aliceblue;
-    font-family: "Trebuchet MS", sans-serif;
-    font-size: 17px;
-}
-
-#single-movie-provider-div {
-    color: aliceblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.single-movie-provider {
-    font-family: "Trebuchet MS", sans-serif;
-    font-size: 17px;
-    text-align: center;
-    margin-right: 10px;
-}
-
-.single-movie-button {
+.single-movie-image{
+    position: relative;
+    width: 387px;
+    height: 564px;
+    border-radius: 11px;
+    margin-left: 10px;
     margin-top: 10px;
 }
 
-.circle {
-    height: 24px;
-    width: 24px;
-    border-radius: 24px;
-    background-color: white;
-    position: absolute;
-    pointer-events: none;
-    top: 0;
-    left: 0;
-    z-index: -1;
+.single-movie-details{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 30px;
+    /*background-color: black;*/
+    border-radius: 5px;
+    padding: 0px;
 }
 
+.single-movie-smalldata-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.single-movie-smalldata{
+    height: 24px;
+    flex-shrink: 0;
+    color: white;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+    padding: 0 15px;
+    margin-right: 3px;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 38px;
+    opacity: 0.800000011920929;
+    background: linear-gradient(147deg, rgba(20, 20, 20, 0.83) 0%, rgba(30, 27, 27, 0.42) 100%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-movie-sinopsis{
+    color: white;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.single-movie-description{
+    margin: 14px 0px;
+    letter-spacing: 1px;
+    color: white;
+    position: relative;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    /*background-color: #ea9f66;*/
+    /*padding: 2px 3px;*/
+}
+
+.single-movie-provider-image{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 25%;
+    margin-right: 10px;
+    margin-top: 12px;
+}
+
+.single-movie-provider_trailer-div{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.single-movie-trailer{
+    border-radius: 8px;
+}
+
+.single-movie-recommendation{
+    width: 175px;
+    visibility: visible;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    filter: grayscale(100%);
+    opacity: 0.699999988079071;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: filter 0.8s ease, box-shadow 0.8s ease;
+}
+
+.single-movie-recommendation:hover{
+    filter: grayscale(0%);
+    opacity: 1;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+
+.single-movie-recommendation:not(:hover) {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: filter 0.8s ease, box-shadow 0.8s ease;
+}
+
+.single-movie-recommendation-button{
+    padding: 0;
+    visibility: hidden;
+    border-radius: 14px;
+    margin-right: 10px;
+    margin-top: 10px;
+}

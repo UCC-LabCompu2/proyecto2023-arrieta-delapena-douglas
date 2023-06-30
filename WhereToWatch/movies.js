@@ -8,7 +8,6 @@ let saveMovieId = (moveid) => {
     localStorage.setItem('movieId', moveid);
     window.location.href = 'description.html';
     window.location.target = '_self';
-    loadMovie();
 }
 
 /**
@@ -23,14 +22,13 @@ const loadMovies = async (movieName) => {
         let url = ''
 
         if (movieName === undefined || movieName === '') {
-            url = `https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=es-MX&page=1`;
-                    // `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1`
+            url = `https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=1`;
         }
         else if (movieName === 'rating'){
-            url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=es-MX&page=1`;
+            url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=en-US&page=1`;
         }
         else {
-            url = `https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${movieName}&include_adult=false&language=es-MX&page=1&sort_by=popularity.desc`;
+            url = `https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${movieName}&include_adult=false&language=en-US&page=1&sort_by=popularity.desc`;
         }
 
         const response = await fetch(url)
@@ -44,6 +42,7 @@ const loadMovies = async (movieName) => {
         } else {
             let peliculas = '';
             data.results.forEach(pelicula => {
+                // console.log(pelicula)
                 peliculas += `
                 <div class ='movie-container'>
                     <img class='movie-image' src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="movie image">
