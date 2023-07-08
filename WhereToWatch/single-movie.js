@@ -86,6 +86,10 @@ const loadMovie = async () => {
         const response = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=dcfbb1ad76889a2f3af575f398f1ab52&language=en-US`);
         const data = await response.json();
 
+        const responseImdb = await fetch(`https://www.omdbapi.com/?i=${data.imdb_id}&apikey=85b3e24f`);
+        const imdbData = await responseImdb.json();
+        console.log(imdbData.imdbRating);
+
         // handle runtime
         let arr = data.release_date.split('-');
         let runTime = `${Math.floor(data.runtime/60)}h ${data.runtime%60}m`;
@@ -110,7 +114,7 @@ const loadMovie = async () => {
                         <p class='single-movie-smalldata'>${arr[0]}</p>
                         ${genres}
                         <p class='single-movie-smalldata'>${runTime}</p>
-                        <p class='single-movie-smalldata'>${data.vote_average}</p>
+                        <p class='single-movie-smalldata-imdb'>IMDb | ${imdbData.imdbRating}</p>
                     </div>
                     <div class='single-movie-description-container'>
                         <p class='single-movie-sinopsis'>Sinopsis:</p>
