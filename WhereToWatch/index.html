@@ -14,12 +14,25 @@
 
 
 <body>
+<canvas id="headerCanvas"></canvas>
 <header class="title-container">
     <h1 id="title">WhereT<button id="title-button" onclick="orderByRating()">o</button>Watch </h1>
 </header>
 <div class='search-box' id='search-box'>
     <label for='search-bar'></label><input id='search-bar' type="text" placeholder="Busque una pelicula" onkeydown='lookMovie()'>
     <button id='search-button' onclick='lookMovie()'>🔎</button>
+</div>
+<div>
+    <button id="random movie" onclick="randomMovie()">Random Movie</button>
+    <select id="genre-finder">
+        <option value="null"></option>
+        <option value="18">Drama</option>
+        <option value="28">Acción</option>
+        <option value="35">Comedia</option>
+        <option value="10749">Romance</option>
+        <option value="27">Horror</option>
+
+    </select>
 </div>
 <div class="movies-container" id="movies-container">
     <!--aca adentro va el html de movies.js -->

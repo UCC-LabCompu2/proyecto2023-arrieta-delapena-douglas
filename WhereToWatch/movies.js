@@ -16,7 +16,7 @@ let saveMovieId = (moveid) => {
  * @param {string} movieName - nombre de la película
  * @return no retorna ningún valor
  */
-const loadMovies = async (movieName) => {
+const loadMovies = async (movieName, filterName) => {
     try {
         const key = 'dcfbb1ad76889a2f3af575f398f1ab52';
         let url = ''
@@ -27,13 +27,20 @@ const loadMovies = async (movieName) => {
         else if (movieName === 'rating'){
             url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=en-US&page=1`;
         }
+        else if(movieName === 'filter'){
+            if (filterName === 'null'){
+                url = `https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=1`;
+            }
+            else {
+                url = `https://api.themoviedb.org/3/discover/movie?api_key=${key}&sort_by=popularity.desc&with_genres=${filterName}`
+            }
+        }
         else {
             url = `https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${movieName}&include_adult=false&language=en-US&page=1&sort_by=popularity.desc`;
         }
 
         const response = await fetch(url)
         const data = await response.json();
-
 
         if (noResults(data)) {
             document.getElementById('search-bar').value = '';
@@ -42,10 +49,16 @@ const loadMovies = async (movieName) => {
         } else {
             let peliculas = '';
             data.results.forEach(pelicula => {
-                // console.log(pelicula)
+                if(pelicula.poster_path === null){
+                    pelicula.poster_path = 'https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg';
+                }
+                else{
+                    let temp = pelicula.poster_path;
+                    pelicula.poster_path = `https://image.tmdb.org/t/p/w500/${temp}`;
+                }
                 peliculas += `
                 <div class ='movie-container'>
-                    <img class='movie-image' src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="movie image">
+                    <img class='movie-image' src="${pelicula.poster_path}" alt="movie image">
                     <button class="movie-button"  onclick="saveMovieId(${pelicula.id})" >Ver mas</button>
                 </div>
             `;
@@ -96,3 +109,25 @@ const orderByRating = async () => {
     heading.innerHTML = `<h1 id="new-title">Películas mej<a href="index.html" id="o-tag" target="_self">o<\a>r calificadas<\h1>`;
     loadMovies('rating');
 }
+/**
+ * Ordena las películas por rating y busca una random
+ * @randomMovie
+ * @param {none} none - no toma parámetros
+ * @returns {Promise<void>}
+ */
+const randomMovie = async () => {
+    const key = 'dcfbb1ad76889a2f3af575f398f1ab52';
+    let url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=en-US&page=1`;
+    const response = await fetch(url)
+    const data = await response.json();
+    let random = Math.floor(Math.random() * data.results.length);
+    let movieId = data.results[random].id;
+    saveMovieId(movieId);
+}
+
+
+document.getElementById('genre-finder').addEventListener('change', function() {
+    const selectedGenre = this.value;
+    // Do something with the selected genre, e.g., call another function or perform actions
+    loadMovies('filter', selectedGenre);
+});
