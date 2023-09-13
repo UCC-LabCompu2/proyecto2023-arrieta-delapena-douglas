@@ -22,10 +22,13 @@ const loadMovie = async () => {
 
             const responseProviders = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/watch/providers?api_key=${apiKey}&language=en-US`);
             const prov_data = await responseProviders.json();
+            // console.log(prov_data.results.AR.flatrate.length)
+            // console.log(prov_data.results.AR.flatrate)
 
             const responseImages = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/images?api_key=${apiKey}`);
             const images_data = await responseImages.json();
             const sortedImages = images_data.backdrops.sort((a, b) => b.file_size - a.file_size);
+            // console.log(sortedImages.length)
 
             const responseRecommendations= await fetch(`https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=${apiKey}&language=en-US&page=1`);
             const similar_data = await responseRecommendations.json();
@@ -55,17 +58,17 @@ const loadMovie = async () => {
             }
 
             // handle backdrops
-            try {
-                if (sortedImages.length >= 3) {
-                    random = Math.floor(Math.random() * 3);
-                } else {
-                    random = Math.floor(Math.random() * images_data.backdrops.length);
-                }
-                localStorage.setItem('backdrop', sortedImages[random].file_path);
-            } catch (error) {
-                console.log(error);
+            if (sortedImages.length === 0 ){
+                random = 'https://images.unsplash.com/photo-1568876694728-451bbf694b83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2832&q=80';
             }
-
+            else if (sortedImages.length >= 3) {
+                random = Math.floor(Math.random() * 3);
+                console.log(random)
+            } else {
+                random = Math.floor(Math.random() * images_data.backdrops.length);
+                console.log(random)
+            }
+            localStorage.setItem('backdrop', sortedImages[random].file_path);
             // handle providers
             try {
                 if(prov_data.results.AR.flatrate.length == 0){
@@ -88,7 +91,6 @@ const loadMovie = async () => {
 
         const responseImdb = await fetch(`https://www.omdbapi.com/?i=${data.imdb_id}&apikey=85b3e24f`);
         const imdbData = await responseImdb.json();
-        console.log(imdbData.imdbRating);
 
         // handle runtime
         let arr = data.release_date.split('-');

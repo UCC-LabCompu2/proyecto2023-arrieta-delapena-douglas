@@ -18,6 +18,7 @@ let saveMovieId = (moveid) => {
  */
 const loadMovies = async (movieName, filterName) => {
     try {
+        // primera parte de la url
         const key = 'dcfbb1ad76889a2f3af575f398f1ab52';
         let url = ''
 
@@ -39,6 +40,7 @@ const loadMovies = async (movieName, filterName) => {
             url = `https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${movieName}&include_adult=false&language=en-US&page=1&sort_by=popularity.desc`;
         }
 
+        // segunda parte formatear la respuesta
         const response = await fetch(url)
         const data = await response.json();
 
@@ -57,10 +59,8 @@ const loadMovies = async (movieName, filterName) => {
                     pelicula.poster_path = `https://image.tmdb.org/t/p/w500/${temp}`;
                 }
                 peliculas += `
-                <div class ='movie-container'>
-                    <img class='movie-image' src="${pelicula.poster_path}" alt="movie image">
-                    <button class="movie-button"  onclick="saveMovieId(${pelicula.id})" >Ver mas</button>
-                </div>
+                    <button class="movie-button" onclick="saveMovieId(${pelicula.id})"><img class='movie-image' src="${pelicula.poster_path}" alt="movie image"></button>
+                    <!--dentro del boton esta el movie id-->
             `;
             })
             document.getElementById('movies-container').innerHTML = peliculas;
