@@ -1,2 +1,7 @@
 WhereToWatch/.idea
-.DS_Store
+./.idea/
+./.DS_Store
+./WhereToWatch/.DS_Store
+./WhereToWatch/css/fonts/.DS_Store
+./WhereToWatch/Mockups/.DS_Store
+./WhereToWatch/Imagenes/.DS_Store

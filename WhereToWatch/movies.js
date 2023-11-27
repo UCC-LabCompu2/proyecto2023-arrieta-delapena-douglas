@@ -11,6 +11,33 @@ let saveMovieId = (moveid) => {
 }
 
 /**
+ * Anima el titulo wheretowatch
+ * @animateTitle
+ * @param{}
+ * @return no retorna ningun valor
+ */
+function animateTitle(){
+    const canvas = document.getElementById('title-canvas');
+    const ctx = canvas.getContext('2d');
+    let text = "WhereToWatch";
+    let opacity = 0;
+    let interval = setInterval(function() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.globalAlpha = opacity;
+            ctx.font = "70px Newake";
+            ctx.fillStyle = "white";
+            ctx.fillText(text, 50, 100);
+
+            opacity += 0.01;
+
+            if (opacity >= 1) clearInterval(interval);
+
+        },
+        20);
+}
+
+/**
  * Carga las películas en la página principal, si se escribe algo en el input, carga las películas que coincidan con el input, sino busca las pelicula más populares
  * @loadMovies
  * @param {string} movieName - nombre de la película

@@ -48,8 +48,7 @@ const loadMovie = async () => {
             if (video_data[0] !== undefined || video_data[0] == '') {
                 video = `                        <iframe class='single-movie-trailer' width="360" height="203"
                             src="https://www.youtube.com/embed/${video_data[0].key}">
-                        </iframe>                    
-`
+                        </iframe>`
                 localStorage.setItem('video', video);
             }
             else{

@@ -47,17 +47,24 @@ form {
     left: 0;
 }
 
-.title-container {
+.canvas-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30vh;
+}
+
+#title-canvas{
+    width: 550px;
+    height: 200px;
+    align-self: center;
+}
+
+.index-buttons{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 0;
-    margin-top: 5px;
-    padding: 20px;
-    font-family: 'Newake', sans-serif;
-    color: aliceblue;
-    letter-spacing: 2px;
-    font-size: 25px;
+    flex-direction: column;
 }
 
 .movies-container {
@@ -82,7 +89,6 @@ form {
     justify-content: center;
     align-items: center;
 }
-
 
 @font-face {
     font-family: 'GillSans';
