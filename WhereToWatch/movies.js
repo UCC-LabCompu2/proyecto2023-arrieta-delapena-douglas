@@ -32,7 +32,6 @@ function animateTitle(){
             opacity += 0.01;
 
             if (opacity >= 1) clearInterval(interval);
-
         },
         20);
 }
@@ -41,6 +40,7 @@ function animateTitle(){
  * Carga las películas en la página principal, si se escribe algo en el input, carga las películas que coincidan con el input, sino busca las pelicula más populares
  * @loadMovies
  * @param {string} movieName - nombre de la película
+ * @param {string} filterName - nombre del filtro
  * @return no retorna ningún valor
  */
 const loadMovies = async (movieName, filterName) => {
@@ -98,7 +98,7 @@ const loadMovies = async (movieName, filterName) => {
 
 }
 
-loadMovies();
+// loadMovies();
 
 /**
  * Busca las películas que coincidan con el input
@@ -132,8 +132,8 @@ const noResults = (data) => {
  * @return no retorna un valor
  */
 const orderByRating = async () => {
-    let heading = document.getElementById("title");
-    heading.innerHTML = `<h1 id="new-title">Películas mej<a href="index.html" id="o-tag" target="_self">o<\a>r calificadas<\h1>`;
+    // let heading = document.getElementById("title");
+    // heading.innerHTML = `<h1 id="new-title">Películas mej<a href="index.html" id="o-tag" target="_self">o<\a>r calificadas<\h1>`;
     loadMovies('rating');
 }
 /**
@@ -155,6 +155,6 @@ const randomMovie = async () => {
 
 document.getElementById('genre-finder').addEventListener('change', function() {
     const selectedGenre = this.value;
-    // Do something with the selected genre, e.g., call another function or perform actions
+    // Do something with the selected genre
     loadMovies('filter', selectedGenre);
 });
