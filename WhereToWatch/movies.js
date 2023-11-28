@@ -132,8 +132,6 @@ const noResults = (data) => {
  * @return no retorna un valor
  */
 const orderByRating = async () => {
-    // let heading = document.getElementById("title");
-    // heading.innerHTML = `<h1 id="new-title">Películas mej<a href="index.html" id="o-tag" target="_self">o<\a>r calificadas<\h1>`;
     loadMovies('rating');
 }
 /**
