@@ -6,9 +6,11 @@
  */
 let saveMovieId = (moveid) => {
     localStorage.setItem('movieId', moveid);
+    clearSearchBar(); // Limpia el campo de búsqueda antes de redirigir
     window.location.href = 'description.html';
     window.location.target = '_self';
 }
+
 
 /**
  * Anima el titulo wheretowatch
@@ -158,3 +160,7 @@ document.getElementById('genre-finder').addEventListener('change', function() {
     // Do something with the selected genre, e.g., call another function or perform actions
     loadMovies('filter', selectedGenre);
 });
+
+function clearSearchBar() {
+    document.getElementById('search-bar').value = '';
+}

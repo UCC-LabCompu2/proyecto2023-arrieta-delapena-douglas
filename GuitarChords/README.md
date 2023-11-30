@@ -14,3 +14,5 @@
 - [ ] -CSS
 - [ ] -Imagenes (png)
 - [ ] -Skecth y Mockup
+- [ ] -https://www.figma.com/file/O9608GPBqd2p5aqOXS75jX/Untitled?type=design&node-id=0-1&mode=design
+- [ ] -https://www.figma.com/file/W2L1cHFZiEZGLlVufsm3qx/Untitled?type=design&node-id=0-1&mode=design

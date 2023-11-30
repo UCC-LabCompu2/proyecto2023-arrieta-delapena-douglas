@@ -142,4 +142,9 @@ const loadMovie = async () => {
     }
 }
 
+function goToHomePage() {
+    // Puedes ajustar la ruta según tu estructura de carpetas y nombres de archivos
+    window.location.href = 'index.html';
+}
+
 
