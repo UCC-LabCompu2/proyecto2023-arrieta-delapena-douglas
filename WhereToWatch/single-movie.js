@@ -1,6 +1,12 @@
 let movieId = localStorage.getItem('movieId');
 const apiKey = 'dcfbb1ad76889a2f3af575f398f1ab52';
 
+/**
+ * Guarda el id en el localstorage
+ * @saveMovieId
+ * @param moveid
+ * @return no retorna valor
+ */
 let saveMovieId = (moveid) => {
     localStorage.setItem('movieId', moveid);
     window.location.href = 'description.html';
@@ -22,13 +28,10 @@ const loadMovie = async () => {
 
             const responseProviders = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/watch/providers?api_key=${apiKey}&language=en-US`);
             const prov_data = await responseProviders.json();
-            // console.log(prov_data.results.AR.flatrate.length)
-            // console.log(prov_data.results.AR.flatrate)
 
             const responseImages = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/images?api_key=${apiKey}`);
             const images_data = await responseImages.json();
             const sortedImages = images_data.backdrops.sort((a, b) => b.file_size - a.file_size);
-            // console.log(sortedImages.length)
 
             const responseRecommendations= await fetch(`https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=${apiKey}&language=en-US&page=1`);
             const similar_data = await responseRecommendations.json();
@@ -68,6 +71,7 @@ const loadMovie = async () => {
                 console.log(random)
             }
             localStorage.setItem('backdrop', sortedImages[random].file_path);
+
             // handle providers
             try {
                 if(prov_data.results.AR.flatrate.length == 0){

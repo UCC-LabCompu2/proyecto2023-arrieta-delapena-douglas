@@ -13,13 +13,10 @@
 </head>
 
 
-<body onload="animateTitle()">
+<body onload="animateTitle(), loadMovies()">
 <div class="canvas-container">
     <canvas id="title-canvas" width="550" height="200"></canvas>
 </div>
-<!--<header class="title-container">-->
-<!--    <h1 id="title">WhereT<button id="title-button" onclick="orderByRating()">o</button>Watch </h1>-->
-<!--</header>-->
 <div class='search-box' id='search-box'>
     <label for='search-bar'></label><input id='search-bar' type="text" placeholder="Busque una pelicula" onkeydown='lookMovie()'>
     <button id='search-button' onclick='lookMovie()'>🔎</button>
@@ -27,6 +24,7 @@
 <br>
 <div class="index-buttons">
     <button id="random movie" onclick="randomMovie()">Random Movie</button>
+    <button id="order-by-rate" onclick="orderByRating()">Rating</button>
     <select id="genre-finder">
         <option value="null"></option>
         <option value="18">Drama</option>
